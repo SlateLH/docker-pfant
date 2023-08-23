@@ -1,7 +1,7 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
 # Install dependencies
-RUN apk add bash gfortran git make musl-dev
+RUN apt update && apt install -y gfortran git make wget
 
 # Set working directory to /var
 WORKDIR /var
